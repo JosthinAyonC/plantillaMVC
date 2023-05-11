@@ -22,7 +22,42 @@
       </tr>
     </tbody>
   </table>
-
+  <form action="form-group" #nuevoForm="ngForm" (ngSubmit)="guardar({nuevoForm.nombre, })">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+      <input type="text" class="form-control" name="nombre" id="input-nombre" placeholder="Nombre"   ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Apellido</label>
+      <input type="text" class="form-control" name="apellido" id="input-apellido" placeholder="Apellido"  ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="exampleForguardar()mControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="correo" id="input-email" placeholder="name@example.com" required >
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Clave</label>
+      <input type="password" class="form-control" name="clave" id="input-clave" placeholder="clave" required >
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"  >Roles</label>
+      <select class="form-select" name="roles" id="input-roles" aria-label="Default select example" >
+        <option value="ROLE_ADMIN">ADMINISTRADOR</option>
+        <option value="ROLE_USER">USUARIO</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Estado</label>      
+      <select class="form-select" name="estado" id="input-estado" aria-label="Default select example" >
+        <option value="A">Activo</option>
+        <option value="I">Inactivo</option>
+      </select>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </form>
   <app-nuevo-usuario (guardarUsuario)="guardar($event)"></app-nuevo-usuario>
 
   <app-modal-confirm

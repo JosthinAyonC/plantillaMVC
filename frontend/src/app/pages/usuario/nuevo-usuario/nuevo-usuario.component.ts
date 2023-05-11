@@ -16,6 +16,6 @@ export class NuevoUsuarioComponent {
 
   onSubmit() {
     this.guardarUsuario.emit(this.usuario);   
-    console.log(this.guardarUsuario); 
+     
   }
 }

@@ -8,33 +8,33 @@
       <div class="modal-body">
         <div class="container">
 
-          <form action="form-group" (submit)="onSubmit()">
+          <form action="form-group" #nuevoForm="ngForm" (ngSubmit)="onSubmit()">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="nombre" id="input-nombre" placeholder="Nombre" [(ngModel)]="usuario.nombre" required >
+              <input type="text" class="form-control" name="nombre" id="input-nombre" placeholder="Nombre"  required ngModel>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Apellido</label>
-              <input type="text" class="form-control" name="apellido" id="input-apellido" placeholder="Apellido" [(ngModel)]="usuario.apellido" required>
+              <input type="text" class="form-control" name="apellido" id="input-apellido" placeholder="Apellido" required ngModel>
             </div>
             <div class="mb-3">
               <label for="exampleForguardar()mControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" name="correo" id="input-email" [(ngModel)]="usuario.correo" placeholder="name@example.com" required>
+              <input type="email" class="form-control" name="correo" id="input-email" placeholder="name@example.com" required ngModel>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Clave</label>
-              <input type="password" class="form-control" name="clave" id="input-clave" [(ngModel)]="usuario.clave" placeholder="clave" required>
+              <input type="password" class="form-control" name="clave" id="input-clave" placeholder="clave" required ngModel>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label" [(ngModel)]="usuario.roles" >Roles</label>
-              <select class="form-select" name="roles" id="input-roles" aria-label="Default select example">
+              <label for="exampleFormControlInput1" class="form-label"  >Roles</label>
+              <select class="form-select" name="roles" id="input-roles" aria-label="Default select example" ngModel>
                 <option value="ROLE_ADMIN">ADMINISTRADOR</option>
                 <option value="ROLE_USER">USUARIO</option>
               </select>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Estado</label>      
-              <select class="form-select" name="estado" id="input-estado" aria-label="Default select example" [(ngModel)]="usuario.estado">
+              <select class="form-select" name="estado" id="input-estado" aria-label="Default select example" ngModel>
                 <option value="A">Activo</option>
                 <option value="I">Inactivo</option>
               </select>

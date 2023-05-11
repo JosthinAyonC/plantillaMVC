@@ -34,10 +34,7 @@ export class UsuarioComponent {
       this.usuarios = data.filter((usuario: Usuario) => usuario.estado);
     });
   }
-  guardar(usuario: Usuario){
-    this.usuarioService.crearNuevoUsuario(usuario)
-    .subscribe(data => {
-      this.router.navigate(['listar']);
-    } );
+  guardar(usuario:Usuario){
+    console.log(usuario);    
   }
 }
