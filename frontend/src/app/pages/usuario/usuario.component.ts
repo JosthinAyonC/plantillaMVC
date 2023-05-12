@@ -14,17 +14,17 @@ export class UsuarioComponent {
   usuarioSeleccionado!: Usuario;
   usuarioIdSeleccionado!: number;
 
+  // usuarios: Observable<Usuario[]> = new Observable<Usuario[]>();
+  constructor(private usuarioService: UsuarioServiceService, private router:Router) { }
+  
   //funcion lista para ser exportada
   obtenerUsuario(usuario: Usuario){
     this.usuarioSeleccionado = usuario;
   }
-  obtenerUsuarioId(usuario: Usuario){
-    
-    return this.usuarioIdSeleccionado;
+  obtenerUsuarioId(usuario: Usuario){    
+    localStorage.setItem('idUsuario', usuario.id.toString());
+    this.router.navigate(['usuario/editar']);
   }
-  // usuarios: Observable<Usuario[]> = new Observable<Usuario[]>();
-  constructor(private usuarioService: UsuarioServiceService, private router:Router) { }
-  
   usuarios: Usuario[] = [];
   ngOnInit() {
     // this.usuarios = this.usuarioService.listar();

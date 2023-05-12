@@ -10,7 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { NuevoUsuarioComponent } from './pages/usuario/nuevo-usuario/nuevo-usuario.component';
 import { ModalConfirmComponent } from './pages/usuario/modal-confirm/modal-confirm.component'
 import { FormsModule } from '@angular/forms';
-import { EditarUsuarioComponent } from './pages/home/editar-usuario/editar-usuario.component';
+import { EditarUsuarioComponent } from './pages/usuario/editar-usuario/editar-usuario.component';
 
 
 @NgModule({

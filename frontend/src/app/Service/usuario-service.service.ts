@@ -22,4 +22,7 @@ export class UsuarioServiceService {
   obtenerUnUsuario(id: number){
     return this.http.get<Usuario>(`http://localhost:8080/api/usuario/${id}`);
   }
+  updateUsuario(id:number ,usuario: Usuario){
+    return this.http.put<Usuario>(`http://localhost:8080/api/usuario/editar/${id}`, usuario);
+  }
 }
