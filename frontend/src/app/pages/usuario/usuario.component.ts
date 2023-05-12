@@ -19,7 +19,7 @@ export class UsuarioComponent {
     this.usuarioSeleccionado = usuario;
   }
   obtenerUsuarioId(usuario: Usuario){
-    this.usuarioIdSeleccionado = usuario.id;
+    
     return this.usuarioIdSeleccionado;
   }
   // usuarios: Observable<Usuario[]> = new Observable<Usuario[]>();

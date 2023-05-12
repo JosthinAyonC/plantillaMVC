@@ -35,8 +35,6 @@ export class NuevoUsuarioComponent {
         alert('Usuario creado');
       });
     }
-
-    // this.modalConfirmacion = false;
   }
 
   emitirEventoUsuarioGuardado(usuario: Usuario) {

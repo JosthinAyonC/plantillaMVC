@@ -19,7 +19,7 @@
         <td>{{ usuario.roles }}</td>
         <td>{{ usuario.estado }}</td>
         <td><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-confirmacion" (click)="obtenerUsuario(usuario)">Eliminar</button>
-        <a class="btn btn-secondary" (click)="obtenerUsuarioId(usuario)" routerLink="/usuario/editar">Editar</a></td>
+        <a class="btn btn-secondary" (click)="obtenerUsuarioId(usuario)" routerLink="/usuario/editar/{{usuarioIdSeleccionado}}">Editar</a></td>
       </tr>
     </tbody>
   </table>
@@ -30,8 +30,6 @@
   [idUsuarioAEliminar]="usuarioSeleccionado"
   (eliminarUsuario)="delete($event)"
   ></app-modal-confirm>
-  
-  
+   
 </div>
-<router-outlet></router-outlet>
 
