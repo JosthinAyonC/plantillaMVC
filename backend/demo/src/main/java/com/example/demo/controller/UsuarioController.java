@@ -28,7 +28,7 @@ public class UsuarioController {
     }
     
     @GetMapping("/{id}")
-    public Usuario getPokemonById(@PathVariable("id") Long id ){
+    public Usuario getUsuarioById(@PathVariable("id") Long id ){
         return usuarioService.listarById(id);
     } 
     

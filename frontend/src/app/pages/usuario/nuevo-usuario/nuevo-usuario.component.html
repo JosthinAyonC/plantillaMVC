@@ -1,4 +1,5 @@
-<div class="modal fade" id="modal-nuevoUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div  class="modal fade" id="modal-nuevoUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -7,41 +8,40 @@
       </div>
       <div class="modal-body">
         <div class="container">
-
-          <form action="form-group" #nuevoForm="ngForm" (ngSubmit)="onSubmit()">
+          <form (ngSubmit)="guardar(nuevoForm.value)" #nuevoForm="ngForm">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="nombre" id="input-nombre" placeholder="Nombre"  required ngModel>
+              <label for="input-nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="nombre" id="input-nombre" placeholder="Nombre" ngModel required>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Apellido</label>
-              <input type="text" class="form-control" name="apellido" id="input-apellido" placeholder="Apellido" required ngModel>
+              <label for="input-apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" name="apellido" id="input-apellido" placeholder="Apellido" ngModel required>
             </div>
             <div class="mb-3">
-              <label for="exampleForguardar()mControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" name="correo" id="input-email" placeholder="name@example.com" required ngModel>
+              <label for="input-email" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="correo" id="input-email" placeholder="name@example.com" ngModel required>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Clave</label>
-              <input type="password" class="form-control" name="clave" id="input-clave" placeholder="clave" required ngModel>
+              <label for="input-clave" class="form-label">Clave</label>
+              <input type="password" class="form-control" name="clave" id="input-clave" placeholder="clave" ngModel required>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"  >Roles</label>
-              <select class="form-select" name="roles" id="input-roles" aria-label="Default select example" ngModel>
+              <label for="input-roles" class="form-label">Roles</label>
+              <select class="form-select" name="roles" id="input-roles" ngModel>
                 <option value="ROLE_ADMIN">ADMINISTRADOR</option>
-                <option value="ROLE_USER">USUARIO</option>
+                <option value="ROLE_USER" selected>USUARIO</option>
               </select>
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Estado</label>      
-              <select class="form-select" name="estado" id="input-estado" aria-label="Default select example" ngModel>
+              <label for="input-estado" class="form-label">Estado</label>
+              <select class="form-select" name="estado" id="input-estado" ngModel>
                 <option value="A">Activo</option>
                 <option value="I">Inactivo</option>
               </select>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Guardar</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
             </div>
           </form>
         </div>

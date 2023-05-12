@@ -19,4 +19,7 @@ export class UsuarioServiceService {
   crearNuevoUsuario(usuario: Usuario){
     return this.http.post<Usuario>(`http://localhost:8080/api/usuario`, usuario);
   }
+  obtenerUnUsuario(id: number){
+    return this.http.get<Usuario>(`http://localhost:8080/api/usuario/${id}`);
+  }
 }

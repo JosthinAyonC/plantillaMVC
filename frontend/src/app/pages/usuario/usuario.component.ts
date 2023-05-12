@@ -12,10 +12,15 @@ import { Usuario } from 'src/app/models/Usuario.model';
 export class UsuarioComponent {
   //usuario que va a ser obtenido para extraer el id cuando presione el boton eliminar/editar
   usuarioSeleccionado!: Usuario;
+  usuarioIdSeleccionado!: number;
 
   //funcion lista para ser exportada
   obtenerUsuario(usuario: Usuario){
     this.usuarioSeleccionado = usuario;
+  }
+  obtenerUsuarioId(usuario: Usuario){
+    this.usuarioIdSeleccionado = usuario.id;
+    return this.usuarioIdSeleccionado;
   }
   // usuarios: Observable<Usuario[]> = new Observable<Usuario[]>();
   constructor(private usuarioService: UsuarioServiceService, private router:Router) { }
@@ -34,7 +39,7 @@ export class UsuarioComponent {
       this.usuarios = data.filter((usuario: Usuario) => usuario.estado);
     });
   }
-  guardar(usuario:Usuario){
-    console.log(usuario);    
+  onUsuarioGuardado(usuario: Usuario) {
+    this.usuarios.push(usuario);
   }
 }
